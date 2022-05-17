@@ -1,0 +1,10 @@
+<h2>1. Users View</h2>
+<users-table-filter
+    [currentSortedColumn]="currentSortedColumn"
+    (changedSorting)="onSortColumn($event)"
+    (filteredName)="onFilterName($event)">
+</users-table-filter>
+<users-table [users]="users" (deleteUser)="onDeleteUser($event)" (editUser)="showEdit($event)">
+</users-table>
+<user-edit *ngIf="showEditUser" [user]="selectedUser" (saveNewUser)="onNewUser($event)" (saveUser)="onEditUser($event)"></user-edit>
+<button *ngIf="!showEditUser" class="add-new-user" (click)="addUser()">Add new user to table</button>

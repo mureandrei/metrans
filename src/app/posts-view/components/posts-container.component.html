@@ -1,0 +1,4 @@
+<h2>Posts View</h2>
+<post *ngFor="let post of posts" [title]="post.title" [author]="post.author">
+    {{ post.message }}
+</post>

@@ -1,0 +1,7 @@
+<div class="filter">
+    Filter name: <input type="text" (keyup)="filter()" [(ngModel)]="filterValue">
+</div>
+<div class="sort">
+    Sort by: 
+    <button *ngFor="let col of columnFilters" (click)="sortBy(col)">{{ col }}</button>
+</div>

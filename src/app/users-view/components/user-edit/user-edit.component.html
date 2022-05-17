@@ -1,0 +1,29 @@
+<h3 *ngIf="user">Edit User {{ user?.username }}</h3>
+<h3 *ngIf="!user">Create User</h3>
+<form [formGroup]="userForm" (ngSubmit)="onSave()">
+    <div>
+        <label>
+            Name:
+            <input formControlName="name" placeholder="Name">
+        </label>
+    </div>
+    <div>
+        <label>
+            Username:
+            <input formControlName="email" placeholder="Email">
+        </label>
+    </div>
+    <div>
+        <label>
+            Username:
+            <input formControlName="username" placeholder="Username">
+        </label>
+    </div>
+    <div>
+        <label>
+            Phone:
+            <input formControlName="phone" placeholder="Phone">
+        </label>
+    </div>
+    <button type="submit">Send</button>
+</form>
